@@ -1,0 +1,1206 @@
+fileFormatVersion: 2
+guid: 7c0f44faad4b3774f96cea28bef39808
+timeCreated: 1501935117
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: back_foot_L
+    100006: back_foot_R
+    100008: back_leg1_L
+    100010: back_leg1_R
+    100012: back_leg2_L
+    100014: back_leg2_R
+    100016: back_leg3_L
+    100018: back_leg3_R
+    100020: Bone
+    100022: chest
+    100024: front_foot_L
+    100026: front_foot_R
+    100028: front_leg1_L
+    100030: front_leg1_R
+    100032: front_leg2_L
+    100034: front_leg2_R
+    100036: front_leg3_L
+    100038: front_leg3_R
+    100040: front_leg4_L
+    100042: front_leg4_R
+    100044: head
+    100046: IK_front_leg_L
+    100048: IK_front_leg_R
+    100050: ik_tail
+    100052: Mesh
+    100054: mouth
+    100056: neck1
+    100058: neck2
+    100060: pole_tail
+    100062: root
+    100064: stomach
+    100066: tail1
+    100068: tail2
+    100070: tail3
+    100072: tail4
+    100074: tail5
+    400000: Armature
+    400002: //RootNode
+    400004: back_foot_L
+    400006: back_foot_R
+    400008: back_leg1_L
+    400010: back_leg1_R
+    400012: back_leg2_L
+    400014: back_leg2_R
+    400016: back_leg3_L
+    400018: back_leg3_R
+    400020: Bone
+    400022: chest
+    400024: front_foot_L
+    400026: front_foot_R
+    400028: front_leg1_L
+    400030: front_leg1_R
+    400032: front_leg2_L
+    400034: front_leg2_R
+    400036: front_leg3_L
+    400038: front_leg3_R
+    400040: front_leg4_L
+    400042: front_leg4_R
+    400044: head
+    400046: IK_front_leg_L
+    400048: IK_front_leg_R
+    400050: ik_tail
+    400052: Mesh
+    400054: mouth
+    400056: neck1
+    400058: neck2
+    400060: pole_tail
+    400062: root
+    400064: stomach
+    400066: tail1
+    400068: tail2
+    400070: tail3
+    400072: tail4
+    400074: tail5
+    4300000: Mesh
+    7400000: Default Take
+    7400002: Eating
+    7400004: Idle
+    7400006: IdleSitted
+    7400008: Leg
+    7400010: Run
+    7400012: Sitting
+    7400014: TakeLeaveObject
+    7400016: Walk
+    7400018: Walk_sad
+    9500000: //RootNode
+    13700000: Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eating
+      takeName: Eating
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: IdleSitted
+      takeName: IdleSitted
+      firstFrame: -1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Leg
+      takeName: Leg
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sitting
+      takeName: Sitting
+      firstFrame: -1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: TakeLeaveObject
+      takeName: TakeLeaveObject
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_sad
+      takeName: Walk_sad
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/root
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_L/back_leg2_L/back_leg3_L/back_foot_L
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/back_leg1_R/back_leg2_R/back_leg3_R/back_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_L/front_leg2_L/front_leg3_L/front_leg4_L/front_foot_L
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/front_leg1_R/front_leg2_R/front_leg3_R/front_leg4_R/front_foot_R
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head
+        weight: 1
+      - path: Armature/Bone/root/stomach/chest/neck1/neck2/head/mouth
+        weight: 1
+      - path: Armature/Bone/root/tail1
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/Bone/root/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/IK_front_leg_L
+        weight: 1
+      - path: Armature/IK_front_leg_R
+        weight: 1
+      - path: Armature/ik_tail
+        weight: 1
+      - path: Armature/pole_tail
+        weight: 1
+      - path: Mesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
