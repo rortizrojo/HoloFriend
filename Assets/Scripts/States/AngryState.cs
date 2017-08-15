@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor.Animations;
 using UnityEngine;
 
 internal class AngryState : IState
@@ -8,9 +9,8 @@ internal class AngryState : IState
        // Debug.Log("Angry ");
     }
 
-    public void UpdateAnims(SkinnedMeshRenderer dogMesh)
+    public void UpdateAnims(SkinnedMeshRenderer dogMesh, Animator animator, float hungry, float energy, float interaction)
     {
         dogMesh.SetBlendShapeWeight(0, 100);
     }
-
 }

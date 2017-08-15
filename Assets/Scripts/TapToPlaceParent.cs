@@ -2,7 +2,7 @@
 
 public class TapToPlaceParent : MonoBehaviour
 {
-    bool placing = false;
+    public bool placing = false;
 
     // Called by GazeGestureManager when the user performs a Select gesture
     void OnSelect()
@@ -10,7 +10,7 @@ public class TapToPlaceParent : MonoBehaviour
         Debug.Log(gameObject.name + ": On Select");
         // On each Select gesture, toggle whether the user is in placing mode.
         placing = !placing;
-
+        Debug.Log("Placing: " + placing);
         // If the user is in placing mode, display the spatial mapping mesh.
         if (placing)
         {

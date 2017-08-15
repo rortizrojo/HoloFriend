@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class HappyState : IState
@@ -46,8 +47,9 @@ public class HappyState : IState
         }*/
     }
 
-    public void UpdateAnims(SkinnedMeshRenderer dogMesh)
+
+    public void UpdateAnims(SkinnedMeshRenderer dogMesh, Animator animator, float hungry, float energy, float interaction)
     {
-        //throw new NotImplementedException();
+        animator.SetFloat("Energy", energy);
     }
 }

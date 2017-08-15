@@ -8,14 +8,15 @@ public class ButtonHoverScript : MonoBehaviour {
     ColorBlock colors;
     Color normalColor;
     Color highlightedColor;
+    public GameObject Object;
     private bool hasChanged;
     public bool isHover;
-    private bool lastState;
+    //private bool lastState;
 
     // Use this for initialization
     void Start () {
 
-        lastState = isHover = false;
+        isHover = false;
 
         colors = new ColorBlock();
 
@@ -63,5 +64,9 @@ public class ButtonHoverScript : MonoBehaviour {
     {
         Debug.Log(gameObject.name + ": On Select");
         gameObject.GetComponent<Button>().onClick.Invoke();
+        Object.GetComponent<PositionManager>().SetPosition(
+                                            gameObject.transform.position.x,
+                                            gameObject.transform.position.y,
+                                            gameObject.transform.position.z);
     }
 }
