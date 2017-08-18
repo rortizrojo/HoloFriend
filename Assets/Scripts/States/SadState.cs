@@ -11,7 +11,7 @@ public class SadState : IState
     }
 
 
-    public void UpdateAnims(SkinnedMeshRenderer dogMesh, Animator animator, float hungry, float energy, float interaction)
+    public void UpdateAnims(GameObject gameObject, GameObject avatar, Animator animator, float hungry, float energy, float interaction)
     {
         throw new NotImplementedException();
     }

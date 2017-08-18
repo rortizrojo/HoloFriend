@@ -6,5 +6,5 @@ using UnityEngine;
 public interface IState {
 
     void ejecutar(GameObject avatar);
-    void UpdateAnims(SkinnedMeshRenderer dogMesh, Animator animator, float hungry, float energy, float interaction);
-}
+    void UpdateAnims(GameObject gameObject, GameObject avatar, Animator animator, float hungry, float energy, float interaction);
+   }

@@ -14,7 +14,7 @@ public class FollowTarget : MonoBehaviour {
     
     Vector3 destination;
 	NavMeshAgent agent;
-    
+    internal bool isMoving;
 
     void Start () {
 
@@ -45,6 +45,7 @@ public class FollowTarget : MonoBehaviour {
                 currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.CatchedState)
             {
                 agent.destination = target.position;
+                isMoving = true;
             }
             
             // The toy is catched
@@ -56,7 +57,7 @@ public class FollowTarget : MonoBehaviour {
                 currentToy.transform.localPosition = new Vector3(-1.418f, 0, -0.316f);
                 Destroy(currentToy.GetComponent<Rigidbody>());
                 target = Camera.main.transform;
-
+                
 
             }
 
@@ -70,6 +71,7 @@ public class FollowTarget : MonoBehaviour {
                 rigidbody.drag = 1.5f;
                 agent.destination = agent.transform.position;
                 currentToy.GetComponent<ToyCommands>().toyState = ToyCommands.ToyStates.StandByState;
+                isMoving = false;
             }
         }
 

@@ -14,26 +14,23 @@ public class StateManager : MonoBehaviour {
     public IState tiredState;
 
     // Minimum = 0 ; Maximum = 100
-    public float hungry;
-    public float energy;
-    public float interaction;
+    public float hungry = 50;
+    public float energy = 50;
+    public float interaction = 50;
 
     public Image imageHungry;
     public Image imageEnergy;
     public Image imageInteraction;
 
-    public SkinnedMeshRenderer DogMesh;
-
-    public Animator animator;
+    GameObject avatar;
+    Animator animator;
 
 
     // Use this for initialization
     void Start () {
         animator = GetComponentInChildren<Animator>();
-        hungry = 50;
-        energy = 50;
-        interaction = 50;
-        
+        avatar = gameObject.transform.Find("Avatar").gameObject;
+       
         tiredState = new TiredState();
         angryState = new AngryState();
         sadState = new SadState();
@@ -62,7 +59,7 @@ public class StateManager : MonoBehaviour {
 
 
         if (currentState != null)
-            currentState.UpdateAnims(DogMesh, animator, hungryAux, energyAux, interactionyAux);
+            currentState.UpdateAnims(gameObject, avatar, animator, hungryAux, energyAux, interactionyAux);
 
     }
 

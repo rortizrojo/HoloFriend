@@ -544,11 +544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbc571ce859be54e943a81bc6e9aa52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!137 &235270519 stripped
-SkinnedMeshRenderer:
-  m_PrefabParentObject: {fileID: 13700000, guid: 7c0f44faad4b3774f96cea28bef39808,
-    type: 3}
-  m_PrefabInternal: {fileID: 256819176}
 --- !u!4 &237033738 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
@@ -578,19 +573,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7017365
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.71243656
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_RootOrder
@@ -614,7 +609,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -89.133
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_Name
@@ -627,6 +622,10 @@ Prefab:
     - target: {fileID: 13700000, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
+      propertyPath: m_Name
+      value: AvatarMesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c0f44faad4b3774f96cea28bef39808, type: 3}
@@ -3356,7 +3355,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132880356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.99995327, z: -0, w: -0.009669978}
   m_LocalPosition: {x: 0.00000032782555, y: -0.35, z: 1.565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3364,7 +3363,7 @@ Transform:
   - {fileID: 759001786}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -181.10799, z: 0}
 --- !u!114 &2132880361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3376,14 +3375,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef496407ebf99b46ac9ce74267dc7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungry: 0
-  energy: 0
-  interaction: 0
+  hungry: 70
+  energy: 100
+  interaction: 100
   imageHungry: {fileID: 959770900}
   imageEnergy: {fileID: 1893184338}
   imageInteraction: {fileID: 1858461876}
-  DogMesh: {fileID: 235270519}
-  animator: {fileID: 0}
 --- !u!1 &2143981917
 GameObject:
   m_ObjectHideFlags: 0

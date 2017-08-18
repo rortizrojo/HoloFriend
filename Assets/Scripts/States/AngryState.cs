@@ -9,8 +9,15 @@ internal class AngryState : IState
        // Debug.Log("Angry ");
     }
 
-    public void UpdateAnims(SkinnedMeshRenderer dogMesh, Animator animator, float hungry, float energy, float interaction)
+    public void UpdateAnims(GameObject gameObject, GameObject avatar, Animator animator, float hungry, float energy, float interaction)
     {
-        dogMesh.SetBlendShapeWeight(0, 100);
+
+        GameObject avatarMesh = avatar.transform.Find("AvatarMesh").gameObject;
+        SkinnedMeshRenderer skinnedMeshRenderer = avatarMesh.GetComponent<SkinnedMeshRenderer>();
+
+        skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
+        
+
+
     }
 }
