@@ -40,7 +40,7 @@ public class FollowTarget : MonoBehaviour {
 
 
             // Update destination if the target moves one unit
-            if (Vector3.Distance(destination, target.position) > 1.0f && 
+            if (target != null && Vector3.Distance(destination, target.position) > 1.0f && 
                 currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.ThrowedState ||
                 currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.CatchedState)
             {
@@ -49,7 +49,7 @@ public class FollowTarget : MonoBehaviour {
             }
             
             // The toy is catched
-            if (Vector3.Distance(agent.transform.position, target.position) < 1 &&
+            if (target != null && Vector3.Distance(agent.transform.position, target.position) < 1 &&
                 (currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.ThrowedState))
             {
                 currentToy.GetComponent<ToyCommands>().toyState = ToyCommands.ToyStates.CatchedState;

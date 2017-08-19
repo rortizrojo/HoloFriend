@@ -96,4 +96,9 @@ public class ToyCommands : MonoBehaviour
         
     }
 
+    public void OnReset()
+    {
+        SetToyFacingUser();
+    }
+
 }
