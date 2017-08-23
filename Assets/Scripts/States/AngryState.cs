@@ -8,9 +8,11 @@ internal class AngryState : IState
        // Debug.Log("Angry ");
     }
 
-    public void UpdateAnims(GameObject gameObject, GameObject avatar, Animator animator, float hungry, float energy, float interaction)
+    public void UpdateAnims( GameObject gameObject,  float hungry, float energy, float interaction)
     {
-
+        GameObject avatar = gameObject.transform.Find("Avatar").gameObject;
+        Animator animator =  gameObject.GetComponentInChildren<Animator>();
+       
         GameObject avatarMesh = avatar.transform.Find("AvatarMesh").gameObject;
         SkinnedMeshRenderer skinnedMeshRenderer = avatarMesh.GetComponent<SkinnedMeshRenderer>();
 

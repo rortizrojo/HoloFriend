@@ -47,11 +47,19 @@ public class HappyState : IState
     }
 
 
-    public void UpdateAnims(GameObject gameObject, GameObject avatar, Animator animator, float hungry, float energy, float interaction)
+    public void UpdateAnims(GameObject gameObject, float hungry, float energy, float interaction)
     {
+        GameObject avatar = gameObject.transform.Find("Avatar").gameObject;
+        Animator animator = gameObject.GetComponentInChildren<Animator>();
+
         animator.SetFloat("Energy", energy);
 
         animator.SetBool("isMoving", gameObject.GetComponent<FollowTarget>().isMoving);
-    
+
+        if( gameObject.GetComponent<StateManager>().IsGivingAPaw )
+        {
+            animator.SetTrigger("Paw");
+            gameObject.GetComponent<StateManager>().IsGivingAPaw = false;
+        }
     }
 }

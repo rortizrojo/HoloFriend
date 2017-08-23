@@ -5,17 +5,40 @@ using UnityEngine.Windows.Speech;
 
 public class SpeechManager : MonoBehaviour
 {
+    public GameObject toy;
+    public GameObject ball;
+    public GameObject avatar;
+
     KeywordRecognizer keywordRecognizer = null;
     Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     // Use this for initialization
     void Start()
     {
-        keywords.Add("Reset world", () =>
+
+
+        keywords.Add("Reset ball", () =>
         {
-            // Call the OnReset method on every descendant object.
-            this.BroadcastMessage("OnReset");
+            // Call the OnReset method on ball object.
+            ball.SendMessage("OnReset");
         });
+
+        //Is used the word toy because "bone" is similar to "ball" and the KeywordRecognizer could confuse
+        keywords.Add("Reset toy", () =>
+        {
+            // Call the OnReset method on bone object.
+            toy.SendMessage("OnReset");
+        });
+
+        keywords.Add("Give me a paw", () =>
+        {
+            // Call the GiveMeAPaw method on avatar object.
+            avatar.SendMessage("OnGiveMeAPaw");
+        });
+
+
+
+
         /*
         keywords.Add("Drop Sphere", () =>
         {

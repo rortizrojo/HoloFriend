@@ -4,6 +4,8 @@ public class ToyCommands : MonoBehaviour
 {
     private static GameObject currentToy;
     public Transform parentTransform;
+    public MeshRenderer meshRenderer;
+
 
     public GameObject dog;
     public int toySpeed = 15;
@@ -55,7 +57,7 @@ public class ToyCommands : MonoBehaviour
             case ToyStates.StandByState: 
                 {
                     SetToyFacingUser();
-                    toyState = ToyStates.ReadyToThrowState;
+                    
                 }
                 break;
             case ToyStates.ReadyToThrowState:
@@ -78,9 +80,11 @@ public class ToyCommands : MonoBehaviour
     /// </summary>
     internal void SetToyFacingUser()
     {
+        meshRenderer.enabled = true;
         gameObject.transform.SetParent(Camera.main.transform);
         gameObject.transform.localPosition = new Vector3(0, 0, 1);
         Destroy(gameObject.GetComponent<Rigidbody>());
+        toyState = ToyStates.ReadyToThrowState;
     }
 
     /// <summary>
@@ -99,6 +103,7 @@ public class ToyCommands : MonoBehaviour
     void OnReset()
     {
         Debug.Log("OnReset");
+
         SetToyFacingUser();
     }
 

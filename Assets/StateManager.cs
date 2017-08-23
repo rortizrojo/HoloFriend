@@ -24,11 +24,12 @@ public class StateManager : MonoBehaviour {
     GameObject avatar;
     Animator animator;
 
+    public bool IsGivingAPaw { get; set; }
+
 
     // Use this for initialization
     void Start () {
-        animator = GetComponentInChildren<Animator>();
-        avatar = gameObject.transform.Find("Avatar").gameObject;
+
        
         tiredState = new TiredState();
         angryState = new AngryState();
@@ -58,11 +59,15 @@ public class StateManager : MonoBehaviour {
 
 
         if (currentState != null)
-            currentState.UpdateAnims(gameObject, avatar, animator, hungryAux, energyAux, interactionyAux);
+            currentState.UpdateAnims(gameObject, hungryAux, energyAux, interactionyAux);
 
     }
 
-
+    void OnGiveMeAPaw()
+    {
+        Debug.Log("Give me a paw command recivied");
+        IsGivingAPaw = true;
+    }
 
     internal void UpdateState()
     {
