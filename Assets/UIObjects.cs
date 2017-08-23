@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UIObjects : MonoBehaviour {
 
@@ -8,8 +6,7 @@ public class UIObjects : MonoBehaviour {
     public GameObject bone;
     public GameObject foodBowl;
     public GameObject waterBowl;
-
-
+    
     // Use this for initialization
     void Start () {
 		
