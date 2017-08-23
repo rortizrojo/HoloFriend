@@ -96,8 +96,9 @@ public class ToyCommands : MonoBehaviour
         
     }
 
-    public void OnReset()
+    void OnReset()
     {
+        Debug.Log("OnReset");
         SetToyFacingUser();
     }
 
