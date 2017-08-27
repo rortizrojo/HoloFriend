@@ -9,16 +9,16 @@ public class FollowTarget : MonoBehaviour {
     GameObject currentToy;
     public GameObject waterBowl;
     public GameObject foodBowl;
-    
+    public StateManager stateManager;
+        
     Vector3 destination;
 	NavMeshAgent agent;
-    internal bool isMoving;
 
     void Start () {
         // Cache agent component and destination
         agent = GetComponent<NavMeshAgent>();
 		destination = agent.destination;
-
+        stateManager = gameObject.GetComponent<StateManager>();
     }
 
 	void FixedUpdate () {
@@ -42,7 +42,7 @@ public class FollowTarget : MonoBehaviour {
                 currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.CatchedState)
             {
                 agent.destination = target.position;
-                isMoving = true;
+                stateManager.IsMoving = true;
             }
             
             // The toy is catched
@@ -54,7 +54,6 @@ public class FollowTarget : MonoBehaviour {
                 currentToy.transform.localPosition = new Vector3(-1.418f, 0, -0.316f);
                 Destroy(currentToy.GetComponent<Rigidbody>());
                 target = Camera.main.transform;
-                
 
             }
 
@@ -68,7 +67,7 @@ public class FollowTarget : MonoBehaviour {
                 rigidbody.drag = 1.5f;
                 agent.destination = agent.transform.position;
                 currentToy.GetComponent<ToyCommands>().toyState = ToyCommands.ToyStates.StandByState;
-                isMoving = false;
+                stateManager.IsMoving = false;
             }
         }
 

@@ -37,6 +37,7 @@ public class SpatialMapping : MonoBehaviour {
         }
         set
         {
+
             drawVisualMeshes = value;
 
             if (drawVisualMeshes)

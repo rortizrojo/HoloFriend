@@ -1,21 +1,27 @@
 ﻿using System;
 using UnityEngine;
 
-internal class TiredState : IState
+namespace Assets.Scripts.States
 {
-
-    
-    public void ejecutar(GameObject avatar)
+    internal class TiredState : State, IState
     {
-        //Debug.Log("Tired ");
-    }
+        public TiredState(GameObject agent) : base(agent)
+        {
+        }
+
+        public void ejecutar(GameObject avatar)
+        {
+            //Debug.Log("Tired ");
+        }
 
 
-    public void UpdateAnims(GameObject gameObject, float hungry, float energy, float interaction)
-    {
-        GameObject avatar = gameObject.transform.Find("Avatar").gameObject;
-        Animator animator = gameObject.GetComponentInChildren<Animator>();
-
-        throw new NotImplementedException();
+        public void UpdateAnims(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
+        {
+            Eat();
+            Move(energy);
+            TakeLeaveObject();
+            
+            UpdateBlendShapes(0,0, 0);
+        }
     }
 }

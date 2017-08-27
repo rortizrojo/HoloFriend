@@ -45,6 +45,7 @@ public class SMSample : MonoBehaviour
     // This is the last time the SurfaceObserver was updated.  It is updated no 
     // more than every two seconds because doing so is potentially time-consuming.
     float m_lastUpdateTime;
+    public bool render;
 
     void Start()
     {
@@ -228,6 +229,13 @@ public class SMSample : MonoBehaviour
         {
             meshFilter.mesh = sd.outputMesh.mesh;
         }
+
+    }
+
+    void OnRender()
+    {
+        Debug.Log("Render");
+        SpatialMapping.Instance.DrawVisualMeshes = !SpatialMapping.Instance.DrawVisualMeshes;
 
     }
 

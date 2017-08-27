@@ -1,24 +1,26 @@
-﻿using System;
+﻿
 using UnityEngine;
 
-internal class AngryState : IState
+namespace Assets.Scripts.States
 {
-    public void ejecutar(GameObject avatar)
+    internal class AngryState : State, IState
     {
-       // Debug.Log("Angry ");
-    }
-
-    public void UpdateAnims( GameObject gameObject,  float hungry, float energy, float interaction)
-    {
-        GameObject avatar = gameObject.transform.Find("Avatar").gameObject;
-        Animator animator =  gameObject.GetComponentInChildren<Animator>();
-       
-        GameObject avatarMesh = avatar.transform.Find("AvatarMesh").gameObject;
-        SkinnedMeshRenderer skinnedMeshRenderer = avatarMesh.GetComponent<SkinnedMeshRenderer>();
-
-        skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
-        
+        public AngryState(GameObject agent) : base(agent)
+        {
+        }
 
 
+        public void ejecutar(GameObject avatar)
+        {
+            // Debug.Log("Angry ");
+        }
+
+        public void UpdateAnims(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
+        {
+
+            Eat();
+            UpdateBlendShapes(hungryBlendShape, 0, 0);
+
+        }
     }
 }

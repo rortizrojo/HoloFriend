@@ -8,15 +8,17 @@ public class SpeechManager : MonoBehaviour
     public GameObject toy;
     public GameObject ball;
     public GameObject avatar;
+    public GameObject canvas;
+    public GameObject renderSM;
 
     KeywordRecognizer keywordRecognizer = null;
     Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
-
+   
+    
     // Use this for initialization
     void Start()
     {
-
-
+        
         keywords.Add("Reset ball", () =>
         {
             // Call the OnReset method on ball object.
@@ -36,7 +38,29 @@ public class SpeechManager : MonoBehaviour
             avatar.SendMessage("OnGiveMeAPaw");
         });
 
+        keywords.Add("Sit", () =>
+        {
+            // Call the GiveMeAPaw method on avatar object.
+            avatar.SendMessage("OnSit");
+        });
 
+        keywords.Add("Up", () =>
+        {
+            // Call the GiveMeAPaw method on avatar object.
+            avatar.SendMessage("OnUp");
+        });
+
+        keywords.Add("Canvas", () =>
+        {
+            // Call the GiveMeAPaw method on avatar object.
+            canvas.SendMessage("OnResetCanvas");
+        });
+
+        keywords.Add("Render", () =>
+        {
+            // Call the GiveMeAPaw method on avatar object.
+            renderSM.SendMessage("OnRender");
+        });
 
 
         /*
@@ -57,6 +81,7 @@ public class SpeechManager : MonoBehaviour
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
     }
+
 
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {

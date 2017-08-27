@@ -33,7 +33,7 @@ public class TapToPlaceParent : MonoBehaviour
             // Do a raycast into the world that will only hit the Spatial Mapping mesh.
             var headPosition = Camera.main.transform.position;
             var gazeDirection = Camera.main.transform.forward;
-            Debug.Log("Camera position: " + headPosition);
+            //Debug.Log("Camera position: " + headPosition);
             RaycastHit hitInfo;
             if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
                 30.0f, SpatialMapping.PhysicsRaycastMask))

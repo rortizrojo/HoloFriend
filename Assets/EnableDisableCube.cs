@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnableDisableCube : MonoBehaviour {
 
-    public GameObject cube;
+    public GameObject terrain;
     void Awake()
     {
 #if UNITY_EDITOR
-        cube.SetActive(true);
+    terrain.SetActive(true);
 #else
-    cube.SetActive(false);
+    terrain.SetActive(false);
 #endif
 
     }

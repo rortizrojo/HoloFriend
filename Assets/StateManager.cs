@@ -1,9 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts.States;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+public struct STATE_LIMITS
+{
+    public const int HUNGRY_LIMIT = 25;
+    public const int INTERACTION_LIMIT = 25;
+    public const int ENERGY_LIMIT = 25;
+}
+
 public class StateManager : MonoBehaviour {
+
+
 
 
     public IState currentState;
@@ -20,46 +29,79 @@ public class StateManager : MonoBehaviour {
     public Image imageHungry;
     public Image imageEnergy;
     public Image imageInteraction;
-
-    GameObject avatar;
-    Animator animator;
+    public STATE_LIMITS stateLimits;
 
     public bool IsGivingAPaw { get; set; }
+    public bool IsSat { get; set; }
+    public bool IsEating { get; set; }
+    public bool IsMoving { get; set; }
+
+    public bool IsTakingLeaving { get; set; }
 
 
     // Use this for initialization
     void Start () {
 
-       
-        tiredState = new TiredState();
-        angryState = new AngryState();
-        sadState = new SadState();
-        happyState = new HappyState();
+        tiredState = new TiredState(gameObject);
+        angryState = new AngryState(gameObject);
+        sadState = new SadState(gameObject);
+        happyState = new HappyState(gameObject);
+        
+
     }
 	
 
 	// Update is called once per frame
     private void FixedUpdate()
     {
+        if (IsEating)
+        {
+            if (hungry < 100)
+                hungry += 0.01f;
+        }
+        else if (hungry > 0) hungry -= 0.008f;
 
-        hungry -= 0.008f;
-        energy -= 0.008f;
-        interaction -= 0.008f;
+        if (IsMoving)
+        {
+            if (energy > 0) energy -= 0.05f;
+            if (interaction < 100) interaction += 0.05f;
+        }
+        else
+        {
+            if (IsSat)
+            {
+                if (interaction < 100) interaction += 0.05f;
+            }
+            else
+            {
+                if (energy < 100) energy += 0.008f;
+                if (interaction > 0) interaction -= 0.008f;
+            }
 
-        float hungryAux = hungry / 100;
-        float energyAux = energy / 100;
-        float interactionyAux = interaction / 100;
+        }
 
 
-        imageHungry.fillAmount = hungryAux;
-        imageEnergy.fillAmount = energyAux;
-        imageInteraction.fillAmount = interactionyAux;
 
+
+/*
+        Debug.Log("Hungry: "+ hungry);
+        Debug.Log("energy: " + energy);
+        Debug.Log("interaction: " + interaction);*/
+
+
+        imageHungry.fillAmount = hungry/100;
+        imageEnergy.fillAmount = energy / 100;
+        imageInteraction.fillAmount = interaction / 100;
+
+        float hungryBlendShape = 100 - (hungry / STATE_LIMITS.HUNGRY_LIMIT)*100  ;
+        float interactionBlendShape = 100 - (interaction / STATE_LIMITS.INTERACTION_LIMIT)*100;
+        float energyBlendShape = 100 - (energy / STATE_LIMITS.ENERGY_LIMIT) * 100;
+        
         UpdateState();
 
 
         if (currentState != null)
-            currentState.UpdateAnims(gameObject, hungryAux, energyAux, interactionyAux);
+            currentState.UpdateAnims(hungry, energy, interaction,  hungryBlendShape, energyBlendShape, interactionBlendShape);
 
     }
 
@@ -69,18 +111,30 @@ public class StateManager : MonoBehaviour {
         IsGivingAPaw = true;
     }
 
+    void OnUp()
+    {
+        Debug.Log("Up");
+        IsSat = false;
+    }
+
+    void OnSit()
+    {
+        Debug.Log("Sit");
+        IsSat = true;
+    }
+
     internal void UpdateState()
     {
 
-        if (hungry < 25) // Angry 
+        if (hungry < STATE_LIMITS.HUNGRY_LIMIT) // Angry 
         {
             currentState = angryState;
         }
-        else if (interaction < 25) // Sad
+        else if (interaction < STATE_LIMITS.INTERACTION_LIMIT) // Sad
         {
             currentState = sadState;
         }
-        else if (energy < 25) // Tired{
+        else if (energy < STATE_LIMITS.ENERGY_LIMIT) // Tired{
         {
             currentState = tiredState;
         }
