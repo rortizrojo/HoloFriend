@@ -10,6 +10,7 @@ namespace Assets.Scripts.States
         protected GameObject avatarMesh;
         protected SkinnedMeshRenderer skinnedMeshRenderer;
         protected StateManager stateManager;
+        protected AudioSource audio;
 
         protected const int AngryBlenderShapeIndex = 0;
         protected const int HappyBlenderShapeIndex = 1;
@@ -22,10 +23,12 @@ namespace Assets.Scripts.States
             avatarMesh = avatar.transform.Find("AvatarMesh").gameObject;
             skinnedMeshRenderer = avatarMesh.GetComponent<SkinnedMeshRenderer>();
             stateManager = agent.GetComponent<StateManager>();
+            audio = agent.GetComponent<AudioSource>();
         }
   
         protected void GivePaw()
         {
+            
             if (stateManager.IsGivingAPaw)
             {
                 animator.SetTrigger("Paw");

@@ -17,7 +17,8 @@ namespace Assets.Scripts.States
 
         public void UpdateAnims(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
         {
-
+            if (!audio.isPlaying)
+                audio.Play();
             Eat();
             UpdateBlendShapes(hungryBlendShape, 0, 0);
 

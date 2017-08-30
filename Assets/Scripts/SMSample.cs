@@ -173,11 +173,14 @@ public class SMSample : MonoBehaviour
                     entry.m_Surface.AddComponent<MeshFilter>();
                     entry.m_Surface.AddComponent<NavMeshSourceTag>();
                     entry.m_Surface.AddComponent<MeshCollider>();
-                    MeshRenderer mr = entry.m_Surface.AddComponent<MeshRenderer>();
+
+                    /*MeshRenderer mr = entry.m_Surface.AddComponent<MeshRenderer>();
+
                     mr.shadowCastingMode = ShadowCastingMode.Off;
-                    mr.receiveShadows = false;
+                    mr.receiveShadows = false;*/
                     entry.m_Surface.AddComponent<WorldAnchor>();
-                    entry.m_Surface.GetComponent<MeshRenderer>().sharedMaterial = m_drawMat;
+                    //entry.m_Surface.GetComponent<MeshRenderer>().sharedMaterial = m_drawMat;
+
                     m_Surfaces[id.handle] = entry;
                 }
                 break;

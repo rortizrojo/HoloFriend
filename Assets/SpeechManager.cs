@@ -10,11 +10,16 @@ public class SpeechManager : MonoBehaviour
     public GameObject avatar;
     public GameObject canvas;
     public GameObject renderSM;
+    public GameObject water;
+    public GameObject food;
+    public GameObject instructionsCanvas;
+    public GameObject voiceCommandsCanvas;
 
     KeywordRecognizer keywordRecognizer = null;
     Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
-   
-    
+
+
+
     // Use this for initialization
     void Start()
     {
@@ -32,47 +37,66 @@ public class SpeechManager : MonoBehaviour
             toy.SendMessage("OnReset");
         });
 
-        keywords.Add("Give me a paw", () =>
+        keywords.Add("Paw", () =>
         {
-            // Call the GiveMeAPaw method on avatar object.
-            avatar.SendMessage("OnGiveMeAPaw");
+            // Call the OnPaw method on avatar object.
+            avatar.SendMessage("OnPaw");
         });
 
         keywords.Add("Sit", () =>
         {
-            // Call the GiveMeAPaw method on avatar object.
+            // Call the OnSit method on avatar object.
             avatar.SendMessage("OnSit");
         });
 
-        keywords.Add("Up", () =>
+        keywords.Add("Get up", () =>
         {
-            // Call the GiveMeAPaw method on avatar object.
+            // Call the OnUp method on avatar object.
             avatar.SendMessage("OnUp");
         });
 
         keywords.Add("Canvas", () =>
         {
-            // Call the GiveMeAPaw method on avatar object.
+            // Call the OnResetCanvas method on canvas object.
             canvas.SendMessage("OnResetCanvas");
         });
 
         keywords.Add("Render", () =>
         {
-            // Call the GiveMeAPaw method on avatar object.
+            // Call the OnRender method on renderSM object.
             renderSM.SendMessage("OnRender");
         });
 
-
-        /*
-        keywords.Add("Drop Sphere", () =>
+        
+        keywords.Add("Food", () =>
         {
-            var focusObject = GazeGestureManager.Instance.FocusedObject;
-            if (focusObject != null)
-            {
-                // Call the OnDrop method on just the focused object.
-                focusObject.SendMessage("OnDrop");
-            }
-        });*/
+            // Call the OnSelect method on food object.
+            food.SendMessage("OnSelect");
+        });
+
+        keywords.Add("Water", () =>
+        {
+            // Call the OnSelect method on water object.
+            water.SendMessage("OnSelect");
+        });
+        
+
+        keywords.Add("Help", () =>
+        {
+            // Enable/Disable the instructions canvas
+            Debug.Log("instructionsCanvas: " + instructionsCanvas.activeSelf);
+            instructionsCanvas.SetActive(!instructionsCanvas.activeSelf);
+            voiceCommandsCanvas.SetActive(false);
+        });
+
+        keywords.Add("Voice", () =>
+        {
+            // Enable/Disable the instructions canvas
+            Debug.Log("voiceCommandsCanvas: " + voiceCommandsCanvas.activeSelf);
+            voiceCommandsCanvas.SetActive(!voiceCommandsCanvas.activeSelf);
+            instructionsCanvas.SetActive(false);
+        });
+
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());

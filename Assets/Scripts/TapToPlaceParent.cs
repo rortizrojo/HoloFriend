@@ -8,6 +8,9 @@ public class TapToPlaceParent : MonoBehaviour
     void OnSelect()
     {
         Debug.Log(gameObject.name + ": On Select");
+
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+
         // On each Select gesture, toggle whether the user is in placing mode.
         placing = !placing;
         Debug.Log("Placing: " + placing);

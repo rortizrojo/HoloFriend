@@ -11,10 +11,7 @@ public struct STATE_LIMITS
 }
 
 public class StateManager : MonoBehaviour {
-
-
-
-
+    
     public IState currentState;
     public IState angryState;
     public IState happyState;
@@ -37,6 +34,7 @@ public class StateManager : MonoBehaviour {
     public bool IsMoving { get; set; }
 
     public bool IsTakingLeaving { get; set; }
+    public bool isHungry { get; set; }
 
 
     // Use this for initialization
@@ -46,14 +44,14 @@ public class StateManager : MonoBehaviour {
         angryState = new AngryState(gameObject);
         sadState = new SadState(gameObject);
         happyState = new HappyState(gameObject);
-        
-
     }
 	
 
 	// Update is called once per frame
     private void FixedUpdate()
     {
+
+
         if (IsEating)
         {
             if (hungry < 100)
@@ -79,9 +77,7 @@ public class StateManager : MonoBehaviour {
             }
 
         }
-
-
-
+        
 
 /*
         Debug.Log("Hungry: "+ hungry);
@@ -105,7 +101,7 @@ public class StateManager : MonoBehaviour {
 
     }
 
-    void OnGiveMeAPaw()
+    void OnPaw()
     {
         Debug.Log("Give me a paw command recivied");
         IsGivingAPaw = true;

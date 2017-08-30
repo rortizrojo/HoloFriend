@@ -6,6 +6,8 @@ public class PositionManager : MonoBehaviour {
 
     Transform parentrTransform;
 
+    public bool IsPlaced {get ; set;}
+
     // Use this for initialization
     void Start () {
 
@@ -19,7 +21,7 @@ public class PositionManager : MonoBehaviour {
 
     internal void SetPosition(float x, float y, float z)
     {
-        gameObject.transform.SetParent(parentrTransform);
+       // gameObject.transform.SetParent(parentrTransform);
         gameObject.transform.position = new Vector3(x, y, z);
         Destroy(gameObject.GetComponent<Rigidbody>());
 
