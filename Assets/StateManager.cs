@@ -1,6 +1,8 @@
-﻿using Assets.Scripts.States;
+﻿using System;
+using Assets.Scripts.States;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 
 public struct STATE_LIMITS
@@ -10,6 +12,7 @@ public struct STATE_LIMITS
     public const int ENERGY_LIMIT = 25;
 }
 
+[RequireComponent (typeof (NavMeshAgent))]
 public class StateManager : MonoBehaviour {
     
     public IState currentState;
@@ -28,6 +31,11 @@ public class StateManager : MonoBehaviour {
     public Image imageInteraction;
     public STATE_LIMITS stateLimits;
 
+
+    public float speed ;
+    public float stoppingDistance ;
+    
+
     public bool IsGivingAPaw { get; set; }
     public bool IsSat { get; set; }
     public bool IsEating { get; set; }
@@ -35,23 +43,50 @@ public class StateManager : MonoBehaviour {
 
     public bool IsTakingLeaving { get; set; }
     public bool isHungry { get; set; }
+    public bool HasTakenObject { get; set; }
 
 
     // Use this for initialization
     void Start () {
 
-        tiredState = new TiredState(gameObject);
-        angryState = new AngryState(gameObject);
-        sadState = new SadState(gameObject);
-        happyState = new HappyState(gameObject);
+        tiredState = new TiredState();
+        angryState = new AngryState();
+        sadState = new SadState();
+        happyState = new HappyState();
     }
 	
 
 	// Update is called once per frame
     private void FixedUpdate()
     {
+        
+        UpdateStatusVars();
+        UpdateStatusCanvasVars();
+        UpdateState();
+        
+        float hungryBlendShape = 100 - (hungry / STATE_LIMITS.HUNGRY_LIMIT)*100  ;
+        float interactionBlendShape = 100 - (interaction / STATE_LIMITS.INTERACTION_LIMIT)*100;
+        float energyBlendShape = 100 - (energy / STATE_LIMITS.ENERGY_LIMIT) * 100;
+        
+        if (currentState != null)
+        {
+            
+            currentState.UpdateBehaviour(hungry, energy, interaction,  hungryBlendShape, energyBlendShape, interactionBlendShape);
+            
+        }
+        
+    }
 
+    private void UpdateStatusCanvasVars()
+    {
 
+        imageHungry.fillAmount = hungry / 100;
+        imageEnergy.fillAmount = energy / 100;
+        imageInteraction.fillAmount = interaction / 100;
+    }
+
+    void UpdateStatusVars()
+    {
         if (IsEating)
         {
             if (hungry < 100)
@@ -72,38 +107,25 @@ public class StateManager : MonoBehaviour {
             }
             else
             {
-                if (energy < 100) energy += 0.008f;
                 if (interaction > 0) interaction -= 0.008f;
             }
 
-        }
-        
+            if (energy < 100) energy += 0.01f;
 
-/*
+        }
+
+        speed = (float)(energy / 100 *1.5) + 0.25f;
+
+
+        /*
         Debug.Log("Hungry: "+ hungry);
         Debug.Log("energy: " + energy);
         Debug.Log("interaction: " + interaction);*/
-
-
-        imageHungry.fillAmount = hungry/100;
-        imageEnergy.fillAmount = energy / 100;
-        imageInteraction.fillAmount = interaction / 100;
-
-        float hungryBlendShape = 100 - (hungry / STATE_LIMITS.HUNGRY_LIMIT)*100  ;
-        float interactionBlendShape = 100 - (interaction / STATE_LIMITS.INTERACTION_LIMIT)*100;
-        float energyBlendShape = 100 - (energy / STATE_LIMITS.ENERGY_LIMIT) * 100;
-        
-        UpdateState();
-
-
-        if (currentState != null)
-            currentState.UpdateAnims(hungry, energy, interaction,  hungryBlendShape, energyBlendShape, interactionBlendShape);
-
     }
 
     void OnPaw()
     {
-        Debug.Log("Give me a paw command recivied");
+        Debug.Log("Paw command recivied");
         IsGivingAPaw = true;
     }
 
@@ -139,4 +161,14 @@ public class StateManager : MonoBehaviour {
             currentState = happyState;
         }
     }
+
+
+
+
+
+
+
+
+
+
 }

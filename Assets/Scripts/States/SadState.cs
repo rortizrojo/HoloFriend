@@ -10,22 +10,16 @@ namespace Assets.Scripts.States
     {
         
 
-        public SadState(GameObject agent) : base(agent)
+        public SadState() : base()
         {
 
         }
 
-        public void ejecutar(GameObject avatar)
-        {
-        }
 
-
-        public void UpdateAnims(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
+        public void UpdateBehaviour(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
         {
-            Eat();
-            Move(energy);
+            Play(energy);
             GivePaw();
-            TakeLeaveObject();
             UpdateBlendShapes(0, 0, interactionBlendShape);
 
         }

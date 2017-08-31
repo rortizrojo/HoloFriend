@@ -2,7 +2,7 @@
 
 public class ToyCommands : MonoBehaviour
 {
-    private static GameObject currentToy;
+   
     public Transform parentTransform;
     public MeshRenderer meshRenderer;
 
@@ -10,61 +10,74 @@ public class ToyCommands : MonoBehaviour
     public GameObject dog;
     public int toySpeed = 15;
     public enum ToyStates { StandByState, ReadyToThrowState, ThrowedState, CatchedState };
-    public ToyStates toyState;
-    
+    public ToyStates ToyState { get; set; }
 
+    private void Awake()
+    {
+        ToyState = ToyStates.StandByState;
+    }
     void Start()
     {
-        toyState = ToyStates.StandByState;
+       
     }
 
     private void Update()
     {/*
-        switch (toyState)
+        switch (ToyState)
         {
             case ToyStates.StandByState:
-                Debug.Log("StandByState" );
+                Debug.Log("StandByState: " + gameObject.name);
                 break;
             case ToyStates.ReadyToThrowState:
-                Debug.Log("ReadyToThrowState");
+                Debug.Log("ReadyToThrowState: " + gameObject.name);
                 break;
             case ToyStates.ThrowedState:
-                Debug.Log("ThrowedState");
+                Debug.Log("ThrowedState: " + gameObject.name);
                 break;
             case ToyStates.CatchedState:
-                Debug.Log("CatchedState");
+                Debug.Log("CatchedState: " + gameObject.name);
                 break;
             default:
                 break;
         }*/
     }
 
-    public static GameObject GetCurrentToy()
-    {
-        return currentToy;
-    }
+    public static GameObject CurrentToy { get; set; }
+
 
 
     // Called by GazeGestureManager when the user performs a Select gesture
     void OnSelect()
     {
-        currentToy = gameObject;
+        CurrentToy = gameObject;
         Debug.Log("On Select: " + gameObject.name);
         // If the toy has no Rigidbody component, add one to enable physics.
 
-        switch (toyState)
+        switch (ToyState)
         {
-            case ToyStates.StandByState: 
+            case (ToyStates.CatchedState):
+                {
+                    SetToyFacingUser();
+
+                }
+                break;
+            case (ToyStates.StandByState ): 
                 {
                     SetToyFacingUser();
                     
                 }
                 break;
+            case (ToyStates.ThrowedState):
+                {
+                    SetToyFacingUser();
+
+                }
+                break; 
             case ToyStates.ReadyToThrowState:
                 {
                     //throw the toy
-                    ResetToyParent();
-                    toyState = ToyStates.ThrowedState;
+                    ThrowObject();
+                    
                 }
                 break;
             default:
@@ -80,18 +93,20 @@ public class ToyCommands : MonoBehaviour
     /// </summary>
     internal void SetToyFacingUser()
     {
+        ToyState = ToyStates.ReadyToThrowState;
         meshRenderer.enabled = true;
         gameObject.transform.SetParent(Camera.main.transform);
         gameObject.transform.localPosition = new Vector3(0, 0, 1);
         Destroy(gameObject.GetComponent<Rigidbody>());
-        toyState = ToyStates.ReadyToThrowState;
+        
     }
 
     /// <summary>
     /// Resets the toy's parent
     /// </summary>
-    internal void ResetToyParent()
+    internal void ThrowObject()
     {
+        ToyState = ToyStates.ThrowedState;
         gameObject.transform.SetParent(parentTransform);
         var rigidbody = this.gameObject.AddComponent<Rigidbody>();
         rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;

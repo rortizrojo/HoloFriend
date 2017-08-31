@@ -1,28 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent (typeof (NavMeshAgent))]
 public class FollowTarget : MonoBehaviour {
-	Transform target;
-    public Transform mouth;
-    public GameObject objectsGameObject;
-    GameObject currentToy;
-    public GameObject waterBowl;
-    public GameObject foodBowl;
-    private StateManager stateManager;
-        
-    Vector3 destination;
-	NavMeshAgent agent;
 
-    void Start () {
-        // Cache agent component and destination
-        agent = GetComponent<NavMeshAgent>();
-		destination = agent.destination;
-        stateManager = gameObject.GetComponent<StateManager>();
-    }
-
+    
 	void FixedUpdate () {
         /*  REVISAR ESTO*/
+        /*
         if( stateManager.currentState == stateManager.angryState &&
                 (waterBowl.GetComponent<PositionManager>().IsPlaced ||
                  foodBowl.GetComponent<PositionManager>().IsPlaced
@@ -42,12 +28,11 @@ public class FollowTarget : MonoBehaviour {
             stateManager.IsMoving = true;
 
 
-            stateManager.IsEating = Vector3.Distance(agent.transform.position, target.position) < 1f && stateManager.isHungry;
+            stateManager.IsEating = Vector3.Distance(agent.transform.position, target.position) < 1f && 
+                                    stateManager.isHungry;
             
         }
-
-
-
+        
 
         currentToy = ToyCommands.GetCurrentToy();
         
@@ -78,9 +63,7 @@ public class FollowTarget : MonoBehaviour {
             {
                 //Debug.Log("The toy is catched");
                 currentToy.GetComponent<ToyCommands>().toyState = ToyCommands.ToyStates.CatchedState;
-                currentToy.transform.SetParent(mouth);
-                currentToy.transform.localPosition = new Vector3(-1.418f, 0, -0.316f);
-                Destroy(currentToy.GetComponent<Rigidbody>());
+                TakeObject();
                 target = Camera.main.transform;
 
             }
@@ -89,28 +72,33 @@ public class FollowTarget : MonoBehaviour {
             if (Distance( agent.transform.position ,Camera.main.transform.position) < 1f &&
                  (currentToy.GetComponent<ToyCommands>().toyState == ToyCommands.ToyStates.CatchedState))
             {
-               // Debug.Log("The dog has brought.  " );
+                // Debug.Log("The dog has brought.  " );
 
-                currentToy.transform.SetParent(objectsGameObject.transform);
-                var rigidbody = currentToy.AddComponent<Rigidbody>();
-                rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
-                rigidbody.drag = 1.5f;
+                LeaveObject();
+
                 agent.destination = agent.transform.position;
                 currentToy.GetComponent<ToyCommands>().toyState = ToyCommands.ToyStates.StandByState;
                 stateManager.IsMoving = false;
             }
         }
 
+    */
 
 
-
+     
     }
 
 
-    float Distance(Vector3 pos1, Vector3 pos2)
-    {
-        return Mathf.Sqrt(Mathf.Pow(Mathf.Abs(pos1.x - pos2.x), 2) + Mathf.Pow(Mathf.Abs(pos1.z - pos2.z), 2));
-    }
+
+
+
+
+
+
+
+
+
+
 
 
     

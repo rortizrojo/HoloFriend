@@ -5,17 +5,13 @@ namespace Assets.Scripts.States
 {
     internal class AngryState : State, IState
     {
-        public AngryState(GameObject agent) : base(agent)
+        public AngryState() : base()
         {
         }
 
 
-        public void ejecutar(GameObject avatar)
-        {
-            // Debug.Log("Angry ");
-        }
 
-        public void UpdateAnims(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
+        public void UpdateBehaviour(float hungry, float energy, float interaction, float hungryBlendShape, float energyBlendShape, float interactionBlendShape)
         {
             if (!audio.isPlaying)
                 audio.Play();
